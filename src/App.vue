@@ -281,7 +281,7 @@ export default {
 }
 
 .theme--dark.v-toolbar {
-  background-color: #20b326 !important;
+  background-color: #5e35b1d1 !important;
   color: #fff;
 }
 </style>

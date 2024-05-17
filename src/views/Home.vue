@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-content>
-      <Carousel/>
+      
       <ProductCards/>
     </v-content>
   </div>
