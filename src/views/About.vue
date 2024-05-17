@@ -12,7 +12,7 @@
           color="red"
           @click="onbtnHome"
         >
-          <v-icon>home</v-icon>
+          <v-icon>Home</v-icon>
         </v-btn>
       </v-fab-transition>
       <v-layout align-center justify-center>
