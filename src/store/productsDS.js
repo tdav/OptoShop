@@ -87,7 +87,8 @@ export default {
         }
 
         let o = await http.get(
-          `/api/v1/products?home=1&per_page=${SysConf.product_per_page}`
+          `/products.json`
+          //`/products.json?home=1&per_page=${SysConf.product_per_page}`
         );
 
         let config = {

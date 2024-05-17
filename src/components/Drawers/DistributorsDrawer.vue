@@ -33,8 +33,8 @@
                 <v-list-tile :key="item.id" avatar @click="selectItem(item)">
                   <v-list-tile-avatar>
                     <myimg
-                      :url="`${serverUrl}storage/${item.image}`"
-                      :errorurl="`https://cdn.vuetifyjs.com/images/cards/sunshine.jpg`"
+                      url="images/distributors.png"
+                      errorurl="`https://cdn2.iconfinder.com/data/icons/business-model-canvas-n-more/64/distributors_team_distribution_distributor-512.png`"
                     />
                   </v-list-tile-avatar>
 

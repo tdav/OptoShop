@@ -32,8 +32,8 @@
                 <v-list-tile avatar ripple :key="item.id" @click="selectItem(item)">
                   <v-list-tile-avatar>
                     <myimg
-                      :url="`${serverUrl}storage/${item.image}`"
-                      :errorurl="`https://cdn.vuetifyjs.com/images/cards/sunshine.jpg`"
+                      url="images/categories.png"
+                      errorurl="`https://icon-library.com/images/category-icon-png/category-icon-png-4.jpg`"
                     />
                   </v-list-tile-avatar>
 

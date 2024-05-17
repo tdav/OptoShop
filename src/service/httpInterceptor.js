@@ -8,6 +8,9 @@ export default function() {
 
   instance.interceptors.request.use(
     function(config) {
+
+      debugger
+
       //Vue.bus.emit('LOADER', true);
       let user = storage.getSessionStorage('user');
       if (user) {

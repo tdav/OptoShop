@@ -61,11 +61,8 @@ export default {
 
       return new Promise((resolve, reject) => {
 
-        axios.post(SysConf.ServerUrl + '/api/v1/login', payload, {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          }
-        }).then(u => {
+        axios.post(SysConf.ServerUrl + '/api/User/Login', payload ).then(u => {
+ 
 
           ss.setLocalStorage('user', u.data);
 

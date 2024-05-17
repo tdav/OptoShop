@@ -6,8 +6,8 @@
 
     <template v-if="!item.loading">
       <v-card elevation="15" style=" height:'100%'" class="flexcard ch-100" hover tile>
-        <v-img
-          :src="`${serverUrl}storage/${item.thumbnail}`"
+        <v-img          
+          src="/images/shkl.jpg"
           aspect-ratio="1.4"
           contain
           @click="showDetails(item, true)"

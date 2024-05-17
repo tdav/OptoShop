@@ -5,7 +5,7 @@
         <v-list class="pa-1">
           <v-list-tile avatar tag="div" to="/myball">
             <v-list-tile-avatar>
-              <img :src="aimg">
+              <img src="images/avatar.webp">
             </v-list-tile-avatar>
 
             <v-list-tile-content>

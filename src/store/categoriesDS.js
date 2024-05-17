@@ -17,7 +17,7 @@ export default {
 
   actions: {
     GET_CATEGORIES: ({ commit }) => {
-      return http.get('/api/v1/categories').then(da => {
+      return http.get('/categories.json').then(da => {
         commit('setCategory', da.data);
         return da.data;
       });

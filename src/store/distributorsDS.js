@@ -18,7 +18,7 @@ export default {
   actions: {
     GET_DISTRIBUTORS: async ({ commit }) => {
       try {
-        let o = await http.get('/api/v1/distributors');
+        let o = await http.get('/distributors.json');
         commit('setDistributors', o.data);
       } catch (e) {
         console.log(e);

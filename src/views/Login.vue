@@ -18,7 +18,7 @@
                     name="login"
                     label="Логин"
                     type="text"
-                    v-model="login"
+                    v-model="phoneNumber"
                   ></v-text-field>
                   <v-text-field
                     append-icon="lock"
@@ -47,27 +47,19 @@
 export default {
   data: () => ({
     loading: false,
-    login: "998",
+    phoneNumber: "998",
     password: ""
   }),
-
-  /*
-  998911366446
-  123456
-
-  admin
-  mu3e6PnbsUUKMtb
-
-  https://opto-bf4e3.web.app/
-*/
-
+ 
   methods: {
     dologin: function() {
       this.loading = true;
 
-      let formData = new FormData();
-      formData.append("login", this.login);
-      formData.append("password", this.password);
+      let formData = {};     
+      formData.phoneNumber=this.phoneNumber,
+      formData.password=this.password; 
+      formData.deviceId='11111';
+      formData.lang = 'UZ'
 
       this.$store
         .dispatch("LOGINAC", formData)

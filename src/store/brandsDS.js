@@ -18,7 +18,7 @@ export default {
   actions: {
     GET_BRANDS: async ({ commit }) => {
       try {
-        let o = await http.get('/api/v1/brands');
+        let o = await http.get('/brands.json');
 
         commit('setBrands', o.data);
       } catch (e) {

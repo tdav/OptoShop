@@ -21,7 +21,7 @@ export default {
     }) => {
       try {
         //if (state.banners) {
-        let o = await http.get('/api/v1/banners');
+        let o = await http.get('/banners.json');
         commit('setBanners', o.data);
         return o.data;
         // } else {

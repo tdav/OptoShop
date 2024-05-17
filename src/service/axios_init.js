@@ -7,15 +7,18 @@ export default {
     let axios_config = {
       baseURL: api_config.ServerUrl,
       method: method,
-      url: url
+      url: url,
+      headers: {
+        Accept: "applicaiton/json",
+        "Content-Type": "application/json",
+      },
     };
-
+ 
     const token = store.getters.userToken;
     if (token) {
       if (formdata)
         axios_config.headers = {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'multipart/form-data'
+          Authorization: `Bearer ${token}`
         };
       else axios_config.headers = { Authorization: `Bearer ${token}` };
     }
@@ -29,21 +32,22 @@ export default {
     }
 
     axios.interceptors.request.use(
-      function(config) {
-        if (config.url.indexOf('/api/v1/products') > -1) {
+      function (config) { 
+
+        if (config.url?.indexOf('products.json') > -1) {
           store.dispatch('SETLOADING', true);
         }
 
         return config;
       },
-      function(error) {
+      function (error) {
         return Promise.reject(error);
       }
     );
 
     axios.interceptors.response.use(
       response => {
-        if (response.config.url.indexOf('/api/v1/products') > -1) {
+        if (response.config.url.indexOf('/products.json') > -1) {
           store.dispatch('SETLOADING', false);
 
           window.vue.$root.$emit('evtShowFabMain', 3);
@@ -58,7 +62,7 @@ export default {
         return response;
       },
       error => {
-        if (error.config.url.indexOf('/api/v1/products') > -1) {
+        if (error.config.url.indexOf('/products.json') > -1) {
           store.dispatch('SETLOADING', false);
           window.vue.$root.$emit('evtShowFabMain', 3);
         }
